@@ -108,7 +108,7 @@ require __DIR__.'/auth.php';
 
 
 
-// Route::group(['middleware' => ['auth', 'permission']],function(){
+Route::group(['middleware' => ['auth', 'permission']],function(){
 
     Route::get('/', function () {
         return view('welcome');
@@ -148,7 +148,7 @@ require __DIR__.'/auth.php';
     Route::put('/contributions/{id}/update-status', [ContributionController::class, 'updateStatus'])->name('contributions.updateStatus');
 
 
-// });
+});
 
 
 

@@ -1,20 +1,20 @@
 <div id="layoutSidenav_content">
     <main>
-        {{-- @php
+        @php
             $user = Auth::user();
-        @endphp --}}
+        @endphp
         <div class="container-fluid px-4">
             <h1 class="mt-4">Dashboard</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item active">
                     <i class="far fa-smile me-1"></i> 
-                    {{-- <span class="text-primary blink">Welcome {{ Auth::user()->role->name }} to the application</span> --}}
+                    <span class="text-primary blink">Welcome {{ Auth::user()->role->name }} to the application</span>
                 </li>
             </ol> 
 
-            {{-- <div class="row">
+            <div class="row">
                 @if($user->isAdmin() || $user->isMarketingManager())
-                folder user
+                {{-- folder user --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body">Users
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-                Folder Faculty
+                {{-- Folder Faculty --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">Faculty
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                Folder Event
+                {{-- Folder Event --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">Event
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                Folder Contribution
+                {{-- Folder Contribution --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body"> Contribution
@@ -73,7 +73,7 @@
                 </div>
 
                 @elseif($user->isMarketingCoordination())
-                  Folder Faculty
+                  {{-- Folder Faculty --}}
                   <div class="col-xl-3 col-md-6">
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">Faculty
@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                Folder Event
+                {{-- Folder Event --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">Event
@@ -103,7 +103,7 @@
                     </div>
                 </div>
 
-                Folder Contribution
+                {{-- Folder Contribution --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body"> Contribution
@@ -120,7 +120,7 @@
                 </div>
 
                 @elseif($user->isStudent() || $user->isGuest())
-                Folder Faculty
+                {{-- Folder Faculty --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">Faculty
@@ -135,7 +135,7 @@
                     </div>
                 </div>
 
-                 Folder Event
+                 {{-- Folder Event --}}
                  <div class="col-xl-3 col-md-6">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">Event
@@ -150,7 +150,7 @@
                     </div>
                 </div>
 
-                Folder Contribution
+                {{-- Folder Contribution --}}
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body">Contribution
@@ -164,10 +164,10 @@
                         </div>
                     </div>
                 </div>
-                @endif --}}
-             {{-- </div> --}}
+                @endif
+            </div>
 
-            {{-- <div class="row">
+            <div class="row">
                 <div class="col-xl-12">
                     <div class="card mb-4">
                         <div class="card-header bg-gradient-primary">Your Details</div>
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}} 
+            </div> 
             
             <div class="row">
                 <div class="col-xl-6">
