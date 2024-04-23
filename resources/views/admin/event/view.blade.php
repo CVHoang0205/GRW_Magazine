@@ -39,9 +39,11 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>
-                                        <a href="{{ route('contributions.create', [$event->id]) }}">
-                                            {{ $event->title }}
-                                        </a>
+                                        @if(isset(auth()->user()->role->permission['name']['contribution']['can-add']))
+                                            <a href="{{ route('contributions.create', [$event->id]) }}">
+                                                {{ $event->title }}
+                                            </a>
+                                        @endif
                                     </td>
                                     <td>{{ $event->description }}</td>
                                     <td>{{ $event->faculty->name ?? '' }}</td>

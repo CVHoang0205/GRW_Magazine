@@ -99,32 +99,20 @@
                                 @enderror
                             </div> --}}
 
-                            
-
-
                             <div class="form-group">
                                 <label>Faculty</label>
-                                <select class="form-control" name="faculty_id" id="faculty_id" required="">
-
-                                    @foreach (App\Models\Faculty::all() as $faculty)
-                                        <option value="{{ $faculty->id }}">
-                                            {{ $faculty->name }} 
-                                        </option>
-                                    @endforeach
-
-                                </select>
+                                <div class="form-control">{{ auth()->user()->faculty->name }}</div>
+                                <input type="hidden" name="faculty_id" value="{{ auth()->user()->faculty_id }}">
                             </div>
 
                             <div class="form-group">
                                 <label>Event</label>
                                 <select class="form-control" name="event_id" required="">
-
-                                    @foreach (App\Models\Event::all() as $event)
+                                    @foreach (App\Models\Event::where('faculty_id', auth()->user()->faculty_id)->get() as $event)
                                         <option value="{{ $event->id }}">
                                             {{ $event->title }}
                                         </option>
                                     @endforeach
-
                                 </select>
                             </div>
 

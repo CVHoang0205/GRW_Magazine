@@ -8,11 +8,11 @@
                     <div class="alert alert-secondary d-flex justify-content-between align-items-center" role="alert">
                         <h4 class="alert-heading">Contribution List</h4>
 
-                        @if(isset(auth()->user()->role->permission['name']['contribution']['can-add']))
-                            <a href="{{ route('contributions.create') }}"  type="button" class="btn btn-primary btn-sm">
+                        {{-- @if(isset(auth()->user()->role->permission['name']['contribution']['can-add'])) --}}
+                            {{-- <a href="{{ route('contributions.create') }}"  type="button" class="btn btn-primary btn-sm">
                                 <i class="fa-solid fa-plus"></i>
-                            </a>
-                        @endif
+                            </a> --}}
+                        {{-- @endif --}}
 
                     </div>
                     @if (Session::has('success'))
