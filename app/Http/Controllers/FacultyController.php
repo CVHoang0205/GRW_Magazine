@@ -16,13 +16,10 @@ class FacultyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        // Lấy id của user hiện tại
+    {  
         $userId = Auth::id();
-        //check user == admin 
         $isAdmin = Auth::user()->isAdmin(); 
 
-        // Lấy danh sách faculty tương ứng
         if ($isAdmin) {
             $faculty = Faculty::all(); 
         } else {
@@ -54,8 +51,9 @@ class FacultyController extends Controller
     {     
         $this->validate($request, [
             'name' => 'required', 
-            'role_id' => ['required'],
+            // 'role_id' => ['required'],
         ]);
+
         
         $data = $request->all();
         Faculty::create($data);
