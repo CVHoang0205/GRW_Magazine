@@ -51,16 +51,6 @@
                                 
                                 <tbody>
                                     <tr>
-                                        <td>Blog</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><input type="checkbox" name="name[home][can-view]" value="1"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-
-                                    <tr>
                                         <td>Faculty</td>
                                         <td><input type="checkbox" name="name[faculty][can-add]" value="1"></td>
                                         <td><input type="checkbox" name="name[faculty][can-edit]" value="1"></td>

@@ -8,12 +8,6 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
-                    @if (isset(auth()->user()->role->permission['name']['home']['can-view']))
-                        <a class="nav-link" href="{{ url('/home') }}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Blog
-                        </a>
-                    @endif
 
                     <div class="sb-sidenav-menu-heading">Interface</div>
                         {{-- navbar Faculty --}}

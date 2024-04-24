@@ -33,16 +33,6 @@
                                 </thead>
                                 <tbody class="table-group-divider">
                                     <tr>
-                                        <td>Blog</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><input type="checkbox" name="name[home][can-view]" @if($permission['name']['home']['can-view'] ?? null) checked @endif value="1"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
                                         <td>Faculty</td>
                                         <td><input type="checkbox" name="name[faculty][can-add]" @if($permission['name']['faculty']['can-add'] ?? null) checked @endif value="1"></td>
                                         <td><input type="checkbox" name="name[faculty][can-edit]" @if($permission['name']['faculty']['can-edit'] ?? null) checked @endif value="1"></td>
