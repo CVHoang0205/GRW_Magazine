@@ -1,1 +1,1 @@
-<div style="width: 500px; height: 100px; display: flex; justify-content: center; align-items: center; font-family: Arial, sans-serif; font-size: 60px; font-weight: bold; color: black;">GRW_Magazine</div>
+<div style="width: 500px; height: 100px; display: flex; justify-content: center; align-items: center; font-family: Arial, sans-serif; font-size: 60px; font-weight: bold; color: black;">GRW<sub>Magazine</sub></div>
