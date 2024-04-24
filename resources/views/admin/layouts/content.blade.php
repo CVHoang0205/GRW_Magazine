@@ -80,7 +80,7 @@
                             <p><i class="fas fa-home" style="font-size:100px;"></i></p>
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#" style="font-size:18px;">
+                            <a class="small text-white stretched-link" href="{{ route('facultys.index') }}" style="font-size:18px;">
                                 {{ App\Models\Faculty::where('name', $user->faculty->name)->count() }}
                             </a>
                             <div class="small text-white"></div>

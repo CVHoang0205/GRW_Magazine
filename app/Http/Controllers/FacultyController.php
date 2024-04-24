@@ -51,7 +51,6 @@ class FacultyController extends Controller
     {     
         $this->validate($request, [
             'name' => 'required', 
-            // 'role_id' => ['required'],
         ]);
 
         

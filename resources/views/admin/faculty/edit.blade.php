@@ -26,7 +26,7 @@
                         <div class="mt-4">
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea placeholder="" id="description" class="form-control" name="description" rows="6" required>{{ $faculty->description }}</textarea>
+                                <textarea placeholder="" id="description" class="form-control" name="description" rows="6">{{ $faculty->description }}</textarea>
                             </div>
                         </div>
 
