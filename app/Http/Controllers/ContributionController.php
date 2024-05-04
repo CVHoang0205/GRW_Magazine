@@ -175,27 +175,25 @@ class ContributionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Lấy contribution từ cơ sở dữ liệu bằng ID
+       
         $contribution = Contribution::findOrFail($id);
 
         // Validate the incoming request data for the fields you want to update
         $validatedData = $request->validate([
             'title' => 'required|string|max:50',
             'description' => 'required|string',
-            'file.*' => 'nullable|mimes:doc,docx,pdf,jpg,jpeg,png', // Thay đổi từ required thành nullable
+            'file.*' => 'nullable|mimes:doc,docx,pdf,jpg,jpeg,png', 
         ]);
 
-        // Kiểm tra xem có tệp nào được tải lên không
+        
         if ($request->hasFile('file')) {
-            $fileNames = []; // Khởi tạo một mảng để lưu trữ các tên tệp tin
+            $fileNames = []; 
 
             $files = $request->file('file');
-        
             foreach ($files as $file) {
-                // Tạo tên file mới với timestamp và đuôi mở rộng
                 $fileName = time() . '_' . $file->getClientOriginalName();
 
-                    // Lưu trữ file trong thư mục storage/app/public/uploads
+                   
                 $file->move(public_path('storage/uploads'), $fileName);
 
                 // Thêm tên file vào mảng fileNames
@@ -335,10 +333,8 @@ class ContributionController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
         $contribution = Contribution::findOrFail($id);
-        // Lấy giá trị của trường status từ yêu cầu
         $status = $request->status;
 
-        // Kiểm tra và cập nhật trạng thái của contribution
         if ($status === 'approved') {
             $contribution->status = Contribution::STATUS_APPROVED;
         } elseif ($status === 'rejected') {

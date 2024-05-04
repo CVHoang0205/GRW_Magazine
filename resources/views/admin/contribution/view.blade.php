@@ -35,7 +35,7 @@
                                     <th>Event</th>
                                     <th>Status</th>
                                     {{-- <th>Approve/Reject</th>  --}}
-                                    @if (auth()->user()->isAdmin() || auth()->user()->isMarketingManager() || auth()->user()->isMarketingCoordination())
+                                    @if (auth()->user()->isMarketingCoordination())
                                         <th>Approve/Reject</th>
                                     @endif                              
                                     <th>Delete</th>
@@ -69,7 +69,7 @@
                                                     <span class="text-danger">{{ ucfirst($con->status) }}</span>
                                                 @endif
                                             </td>
-                                            @if (auth()->user()->isAdmin() || auth()->user()->isMarketingManager() || auth()->user()->isMarketingCoordination())
+                                            @if (auth()->user()->isMarketingCoordination())
                                                 <td>
                                                     <form action="{{ route('contributions.updateStatus', $con->id) }}" method="POST">
                                                         @csrf
